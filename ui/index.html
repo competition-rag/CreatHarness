@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CreatHarness Studio</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">C</div>
+        <div>
+          <div class="brand-title">CreatHarness</div>
+          <div class="brand-subtitle">Agent Rules Studio</div>
+        </div>
+      </div>
+
+      <button class="primary-btn" id="newRuleBtn">+ 新建规则</button>
+
+      <nav class="nav">
+        <a class="nav-item active" href="#">规则管理</a>
+        <a class="nav-item" href="#">智能体编排</a>
+        <a class="nav-item" href="#">生命周期图</a>
+        <a class="nav-item" href="#">工具中心</a>
+        <a class="nav-item" href="#">运行日志</a>
+      </nav>
+
+      <div class="panel-card">
+        <div class="panel-label">项目状态</div>
+        <div class="status-pill online">运行中</div>
+        <div class="mini-text">当前版本：v1.1.0</div>
+        <div class="mini-text">规则：3</div>
+        <div class="mini-text">智能体：2</div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>规则与智能体管理台</h1>
+          <p>像 Dify 一样管理规则、智能体、生命周期与发布。</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="secondary-btn" id="addAgentBtn">+ 新建智能体</button>
+          <button class="secondary-btn" id="saveBtn">保存草稿</button>
+          <button class="primary-btn">发布版本</button>
+        </div>
+      </header>
+
+      <section class="workspace">
+        <div class="left-col">
+          <div class="section-head">
+            <h2>规则列表</h2>
+            <span id="ruleCount" class="muted"></span>
+          </div>
+          <div id="ruleList" class="card-list"></div>
+
+          <div class="section-head">
+            <h2>智能体列表</h2>
+            <span id="agentCount" class="muted"></span>
+          </div>
+          <div id="agentList" class="card-list"></div>
+        </div>
+
+        <div class="center-col">
+          <div class="canvas-card">
+            <div class="section-head compact">
+              <h2>生命周期图</h2>
+              <span class="muted">拖拽式编排视图</span>
+            </div>
+            <div id="graphCanvas" class="graph-canvas"></div>
+          </div>
+        </div>
+
+        <aside class="right-col">
+          <div class="detail-card">
+            <div class="section-head compact">
+              <h2>详情面板</h2>
+              <span class="muted">编辑当前选中项</span>
+            </div>
+            <div id="detailPanel"></div>
+          </div>
+
+          <div class="detail-card">
+            <div class="section-head compact">
+              <h2>运行预览</h2>
+            </div>
+            <pre id="previewBox" class="preview-box"></pre>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-card">
+      <div class="section-head compact">
+        <h2 id="modalTitle">新建规则</h2>
+        <button id="closeModal" class="icon-btn">×</button>
+      </div>
+      <div class="form-grid">
+        <label>
+          名称
+          <input id="formName" type="text" placeholder="dish_weight_rule" />
+        </label>
+        <label>
+          类型
+          <select id="formType">
+            <option value="rule">规则</option>
+            <option value="agent">智能体</option>
+          </select>
+        </label>
+        <label class="full">
+          输入描述
+          <textarea id="formInput" rows="3" placeholder="输入类型和说明"></textarea>
+        </label>
+        <label class="full">
+          输出描述
+          <textarea id="formOutput" rows="3" placeholder="输出类型和说明"></textarea>
+        </label>
+      </div>
+      <div class="modal-actions">
+        <button id="cancelModal" class="secondary-btn">取消</button>
+        <button id="confirmModal" class="primary-btn">确认</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>

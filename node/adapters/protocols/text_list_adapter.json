@@ -1,0 +1,22 @@
+{
+  "protocolVersion": "1.0",
+  "sourceOfTruth": "json",
+  "category": "adapter",
+  "name": "text_list_adapter",
+  "type": "adapter",
+  "descript": "将字符串按逗号、顿号或换行拆分为字符串列表，适合在节点之间做类型适配。",
+  "transform": {
+    "from": "str",
+    "to": "list[str]"
+  },
+  "input": {
+    "type": "str",
+    "encoding": "str",
+    "description": "原始字符串或单字段文本"
+  },
+  "output": {
+    "type": "list[str]",
+    "encoding": "json",
+    "description": "拆分后的字符串列表"
+  }
+}

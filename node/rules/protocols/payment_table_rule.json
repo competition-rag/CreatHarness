@@ -1,0 +1,19 @@
+{
+  "protocolVersion": "1.0",
+  "sourceOfTruth": "json",
+  "category": "rule",
+  "name": "payment_table_rule",
+  "descript": "根据输入中的关键词调用支付检查和空桌检查工具，并将结果拼接返回。",
+  "input": {
+    "type": "dict",
+    "semantic_type": "KeywordInput",
+    "encoding": "json",
+    "description": "包含用户输入的对象，例如 {\"input_text\": \"有没有支付，当前有空桌吗\"}"
+  },
+  "output": {
+    "type": "str",
+    "semantic_type": "BusinessCheckResult",
+    "encoding": "str",
+    "description": "返回支付状态和空桌数量的拼接结果。"
+  }
+}

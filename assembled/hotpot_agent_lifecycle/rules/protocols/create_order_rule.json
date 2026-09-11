@@ -1,0 +1,16 @@
+{
+  "name": "create_order_rule",
+  "descript": "当用户意图为点餐时，调用订单创建工具写入订单库并返回订单创建结果。",
+  "input": {
+    "type": "dict",
+    "semantic_type": "CreateOrderInput",
+    "encoding": "json",
+    "description": "包含意图、点餐菜品列表和原始输入的结构化字典"
+  },
+  "output": {
+    "type": "dict",
+    "semantic_type": "CreateOrderOutput",
+    "encoding": "json",
+    "description": "输出创建订单结果、订单号和订单详情"
+  }
+}

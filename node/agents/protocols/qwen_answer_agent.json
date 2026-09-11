@@ -1,0 +1,19 @@
+{
+  "protocolVersion": "1.0",
+  "sourceOfTruth": "json",
+  "category": "agent",
+  "name": "qwen_answer_agent",
+  "descript": "根据用户输入、菜品列表和重量报告，调用千问模型生成自然语言点餐回答。",
+  "input": {
+    "type": "str",
+    "semantic_type": "AnswerPrompt",
+    "encoding": "str",
+    "description": "包含用户原始输入、菜品列表和重量报告的回答上下文"
+  },
+  "output": {
+    "type": "str",
+    "semantic_type": "UserAnswer",
+    "encoding": "str",
+    "description": "使用千问 API 生成并返回给用户的自然语言答案"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "protocolVersion": "1.0",
+  "sourceOfTruth": "json",
+  "category": "rule",
+  "name": "dish_weight_rule",
+  "descript": "根据菜品名称估算每道菜和所有菜品的总重量，并判断是否超过 2KG。",
+  "input": {
+    "type": "list[str]",
+    "semantic_type": "DishList",
+    "encoding": "json",
+    "description": "由多个菜品名称组成的字符串列表，例如：[\"毛肚\", \"牛肉\", \"白菜\"]"
+  },
+  "output": {
+    "type": "str",
+    "semantic_type": "WeightReport",
+    "encoding": "str",
+    "description": "返回每个菜品的估算重量、所有菜品的总重量，以及总重量是否超过2KG"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "order_response_agent",
+  "descript": "根据意图识别结果和规则执行结果，生成最终返回给用户的订单系统回答。",
+  "input": {
+    "type": "dict",
+    "semantic_type": "OrderFlowState",
+    "encoding": "json",
+    "description": "包含意图、菜品、订单号、创建订单结果和查询订单结果的完整状态"
+  },
+  "output": {
+    "type": "str",
+    "semantic_type": "OrderUserAnswer",
+    "encoding": "str",
+    "description": "输出给用户的最终自然语言结果"
+  }
+}

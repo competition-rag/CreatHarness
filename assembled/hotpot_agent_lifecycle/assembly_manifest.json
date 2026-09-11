@@ -1,0 +1,9 @@
+{
+  "name": "hotpot_agent_lifecycle",
+  "version": "2.0.0",
+  "source_rules": "node",
+  "lifecycle": "lifecycle.yaml",
+  "entrypoint": "run.py",
+  "generated_by": "RuleAssembler",
+  "adapter_mode": "manual"
+}

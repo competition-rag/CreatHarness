@@ -1,0 +1,25 @@
+{
+  "name": "timeout_harness",
+  "type": "harness",
+  "descript": "记录被包含节点或子图的执行时间，并在结束阶段检查是否超过最大执行时间。",
+  "modes": [
+    "contains",
+    "before_after"
+  ],
+  "lifecycle": {
+    "start": "记录开始时间",
+    "end": "检查执行耗时并在超时后抛出错误"
+  },
+  "config": {
+    "timeout_seconds": {
+      "type": "float",
+      "required": true,
+      "description": "允许被包含对象执行的最大秒数"
+    },
+    "message": {
+      "type": "str",
+      "required": false,
+      "description": "超时后的错误信息"
+    }
+  }
+}

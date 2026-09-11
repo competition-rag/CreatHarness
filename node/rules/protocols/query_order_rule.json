@@ -1,0 +1,19 @@
+{
+  "protocolVersion": "1.0",
+  "sourceOfTruth": "json",
+  "category": "rule",
+  "name": "query_order_rule",
+  "descript": "当用户意图为查询订单时，调用订单查询工具在订单库中查找订单。",
+  "input": {
+    "type": "dict",
+    "semantic_type": "QueryOrderInput",
+    "encoding": "json",
+    "description": "包含意图、订单号和原始输入的结构化字典"
+  },
+  "output": {
+    "type": "dict",
+    "semantic_type": "QueryOrderOutput",
+    "encoding": "json",
+    "description": "输出查询结果字符串和订单详情"
+  }
+}

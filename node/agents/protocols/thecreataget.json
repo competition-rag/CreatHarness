@@ -1,0 +1,19 @@
+{
+  "protocolVersion": "1.0",
+  "sourceOfTruth": "json",
+  "category": "agent",
+  "name": "thecreataget",
+  "descript": "调用千问模型从用户的自然语言点餐请求中提取菜品名称列表。",
+  "input": {
+    "type": "str",
+    "semantic_type": "UserOrderRequest",
+    "encoding": "str",
+    "description": "用户提出的点餐需求字符串"
+  },
+  "output": {
+    "type": "list[str]",
+    "semantic_type": "DishList",
+    "encoding": "json",
+    "description": "输出菜品名称组成的字符串列表"
+  }
+}

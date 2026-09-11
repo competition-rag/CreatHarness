@@ -1,0 +1,16 @@
+{
+  "name": "order_router_agent",
+  "descript": "识别用户是要点餐还是查询订单，并提取菜品列表或订单号。",
+  "input": {
+    "type": "str",
+    "semantic_type": "OrderUserInput",
+    "encoding": "str",
+    "description": "用户输入的点餐或查单请求字符串"
+  },
+  "output": {
+    "type": "dict",
+    "semantic_type": "OrderIntentPayload",
+    "encoding": "json",
+    "description": "输出意图、菜品列表、订单号和原始问题等结构化结果"
+  }
+}

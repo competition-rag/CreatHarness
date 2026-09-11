@@ -173,38 +173,3 @@ python -m compileall -q assembly_runtime node run_context runtime memory tools
 cd ui
 npm run build
 ```
-
-## Important Notes Before Publishing
-
-- Do not upload `.env`; use `.env.example` for public configuration names.
-- Do not upload `node_modules/`, `.next/`, `__pycache__/`, `.pyc`, local sqlite databases, or generated logs.
-- `assembled/` is generated output. Keep it only if you want GitHub readers to inspect a ready-to-run example package; otherwise it can be regenerated from `node/`.
-- Local order data under `data/orders/` is demo runtime data and should not include private records.
-- Review all files once before the first public push.
-
-## GitHub Upload Steps
-
-Create an empty repository on GitHub first, then run these commands from the project root:
-
-```powershell
-git init
-git add .
-git status
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
-git push -u origin main
-```
-
-If you prefer SSH:
-
-```powershell
-git remote add origin git@github.com:YOUR_USERNAME/YOUR_REPOSITORY.git
-git push -u origin main
-```
-
-If GitHub asks for a password when using HTTPS, use a GitHub personal access token instead of your account password.
-
-## License
-
-No license file is included yet. Add a `LICENSE` file before publishing if you want others to know how they may use, copy, or modify the project.
